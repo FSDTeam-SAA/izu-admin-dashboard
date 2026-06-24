@@ -39,15 +39,9 @@
   --input: oklch(0.922 0 0);
   --ring: oklch(0.52 0.12 250);
 
-<<<<<<< HEAD
   --header-bg: #003061;
   --sidebar-from: #003061;
   --sidebar-to: #608bb9;
-=======
-  /* Sidebar gradient (navy -> slate) */
-  --sidebar-from: #0a2747;
-  --sidebar-to: #5d7e9e;
->>>>>>> 84077981138d301b127f44047f72d4283161beb1
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-active: #2767b0;
 }
@@ -115,7 +109,6 @@ body {
   background: linear-gradient(
     180deg,
     var(--sidebar-from) 0%,
-<<<<<<< HEAD
     var(--sidebar-to) 100%
   );
 }
@@ -124,12 +117,6 @@ body {
   background: var(--header-bg);
 }
 
-=======
-    var(--sidebar-to) 130%
-  );
-}
-
->>>>>>> 84077981138d301b127f44047f72d4283161beb1
 /* Hide number input spinners for OTP fields */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

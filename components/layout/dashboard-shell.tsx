@@ -41,11 +41,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
       </div>
 
       {/* Main content */}
-<<<<<<< HEAD
       <div className="flex min-h-screen min-w-0 flex-1 flex-col pt-16 lg:pl-64">
-=======
-      <div className="flex min-h-screen min-w-0 flex-1 flex-col lg:pl-64">
->>>>>>> 84077981138d301b127f44047f72d4283161beb1
         <Header onMenuClick={() => setMobileOpen(true)} />
         <main className="min-w-0 flex-1 overflow-x-hidden bg-zinc-50/60 p-4 sm:p-6">
           {children}
