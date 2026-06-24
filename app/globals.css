@@ -39,9 +39,9 @@
   --input: oklch(0.922 0 0);
   --ring: oklch(0.52 0.12 250);
 
-  /* Sidebar gradient (navy -> slate) */
-  --sidebar-from: #0a2747;
-  --sidebar-to: #5d7e9e;
+  --header-bg: #003061;
+  --sidebar-from: #003061;
+  --sidebar-to: #608bb9;
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-active: #2767b0;
 }
@@ -109,8 +109,12 @@ body {
   background: linear-gradient(
     180deg,
     var(--sidebar-from) 0%,
-    var(--sidebar-to) 130%
+    var(--sidebar-to) 100%
   );
+}
+
+.header-background {
+  background: var(--header-bg);
 }
 
 /* Hide number input spinners for OTP fields */

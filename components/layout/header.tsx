@@ -25,7 +25,7 @@ export function Header({ onMenuClick }: HeaderProps) {
     [user?.name, user?.lastName].filter(Boolean).join(" ") || "Admin";
 
   return (
-    <header className="sidebar-gradient sticky top-0 z-30 flex h-16 items-center gap-3 px-4 text-white sm:gap-4 sm:px-6">
+    <header className="header-background fixed inset-x-0 top-0 z-40 flex h-16 items-center gap-3 px-4 text-white shadow-sm sm:gap-4 sm:px-6 lg:left-64">
       <button
         type="button"
         onClick={onMenuClick}
