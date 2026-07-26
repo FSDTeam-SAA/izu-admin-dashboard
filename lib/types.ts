@@ -56,6 +56,10 @@ export interface UserListItem {
   name: string;
   email: string;
   phone?: string;
+  accountType: "user" | "provider";
+  isSuspended: boolean;
+  isVerified: boolean;
+  createdAt?: string;
   totalCompletedOrder: number;
 }
 

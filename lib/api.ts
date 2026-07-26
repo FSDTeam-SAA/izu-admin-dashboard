@@ -92,6 +92,49 @@ export async function getUserList(params: { page: number; limit: number }) {
   return data;
 }
 
+export async function updateUserSuspension(
+  userId: string,
+  isSuspended: boolean
+) {
+  const { data } = await api.patch<ApiResponse<UserListItem>>(
+    `/admin/users/${userId}/suspension`,
+    { isSuspended }
+  );
+  return data;
+}
+
+export async function updateUserVerification(
+  userId: string,
+  isVerified: boolean
+) {
+  const { data } = await api.patch<ApiResponse<UserListItem>>(
+    `/admin/users/${userId}/verification`,
+    { isVerified }
+  );
+  return data;
+}
+
+export async function grantProviderStatus(userId: string) {
+  const { data } = await api.patch<ApiResponse<UserListItem>>(
+    `/admin/users/${userId}/provider-status`
+  );
+  return data;
+}
+
+export async function revokeProviderStatus(userId: string) {
+  const { data } = await api.delete<ApiResponse<UserListItem>>(
+    `/admin/users/${userId}/provider-status`
+  );
+  return data;
+}
+
+export async function deleteUser(userId: string) {
+  const { data } = await api.delete<ApiResponse<{ userId: string }>>(
+    `/admin/users/${userId}`
+  );
+  return data;
+}
+
 export async function getProviderList(params: { page: number; limit: number }) {
   const { data } = await api.get<PaginatedResponse<ProviderListItem>>(
     "/admin/providers",

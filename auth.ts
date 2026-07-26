@@ -38,7 +38,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const data = json.data;
 
         // Restrict the admin dashboard to admin accounts only.
-        if (data.role && data.role !== "admin") {
+        if (data.role && !["admin", "super_admin"].includes(data.role)) {
           throw new Error("You are not authorized to access the admin panel.");
         }
 
